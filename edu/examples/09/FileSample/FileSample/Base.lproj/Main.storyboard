@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-n9-PUf">
+                                <rect key="frame" x="36" y="358" width="342" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brh-oB-eya">
+                                <rect key="frame" x="202" y="428" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Xa-39-RJt"/>
+                                    <constraint firstAttribute="width" constant="80" id="iUN-Xf-XF1"/>
+                                </constraints>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEd-7m-NZD"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ここにデータをロードします。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbk-gR-Y3k">
+                                <rect key="frame" x="36" y="504" width="342" height="322"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O03-xU-jPH">
+                                <rect key="frame" x="298" y="428" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="78i-fE-si8"/>
+                                    <constraint firstAttribute="width" constant="80" id="JEm-6Z-RPz"/>
+                                </constraints>
+                                <state key="normal" title="LOAD"/>
+                                <connections>
+                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tV4-v0-s3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mQ5-n9-PUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="75g-vh-aOJ"/>
+                            <constraint firstItem="O03-xU-jPH" firstAttribute="leading" secondItem="Brh-oB-eya" secondAttribute="trailing" constant="16" id="7hU-gx-8bA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qbk-gR-Y3k" secondAttribute="bottom" constant="36" id="84O-vz-tJh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQ5-n9-PUf" secondAttribute="trailing" constant="36" id="DdY-Wh-5cb"/>
+                            <constraint firstItem="O03-xU-jPH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fey-r0-des"/>
+                            <constraint firstItem="qbk-gR-Y3k" firstAttribute="top" secondItem="Brh-oB-eya" secondAttribute="bottom" constant="36" id="FqN-YI-z4m"/>
+                            <constraint firstItem="Brh-oB-eya" firstAttribute="top" secondItem="mQ5-n9-PUf" secondAttribute="bottom" constant="36" id="HCi-qx-xpC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O03-xU-jPH" secondAttribute="trailing" constant="36" id="NCu-MI-m4h"/>
+                            <constraint firstItem="qbk-gR-Y3k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="jXx-wM-sX8"/>
+                            <constraint firstItem="Brh-oB-eya" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vWK-2f-wVq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qbk-gR-Y3k" secondAttribute="trailing" constant="36" id="wCl-rP-xW4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="mQ5-n9-PUf" id="0IV-Sf-t0F"/>
+                        <outlet property="textView" destination="qbk-gR-Y3k" id="buf-Pb-ZiZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+    </scenes>
+</document>

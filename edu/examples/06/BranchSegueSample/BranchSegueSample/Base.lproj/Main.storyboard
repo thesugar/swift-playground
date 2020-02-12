@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BranchSegueSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qap-bv-8fL">
+                                <rect key="frame" x="187" y="440" width="40" height="16"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="5xW-SP-nn6"/>
+                                    <constraint firstAttribute="width" constant="40" id="ywT-mR-Nof"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3Zs-RN-Ycd">
+                                <rect key="frame" x="87" y="393" width="240" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="yWH-Az-oSQ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="ワシ"/>
+                                    <segment title="クジャク"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHr-8n-OCJ">
+                                <rect key="frame" x="107" y="472" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0rO-Ti-zfZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="CvL-cg-gh4"/>
+                                </constraints>
+                                <state key="normal" title="表示"/>
+                                <connections>
+                                    <action selector="showButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vun-Cn-oJf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IHr-8n-OCJ" firstAttribute="top" secondItem="qap-bv-8fL" secondAttribute="bottom" constant="16" id="az0-ro-TPn"/>
+                            <constraint firstItem="qap-bv-8fL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g6s-ce-6p9"/>
+                            <constraint firstItem="3Zs-RN-Ycd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j8p-LF-Z2U"/>
+                            <constraint firstItem="qap-bv-8fL" firstAttribute="top" secondItem="3Zs-RN-Ycd" secondAttribute="bottom" constant="16" id="vt0-Cx-Bk2"/>
+                            <constraint firstItem="qap-bv-8fL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yKd-Jm-rHW"/>
+                            <constraint firstItem="IHr-8n-OCJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z22-ML-dT4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segment" destination="3Zs-RN-Ycd" id="CGh-PN-gSJ"/>
+                        <segue destination="Ew3-Sj-ErG" kind="presentation" identifier="eagle" id="oYI-4u-Xnd"/>
+                        <segue destination="vcE-Da-cCB" kind="presentation" identifier="peacock" id="opj-Oh-5m7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QQA-kz-awi">
+            <objects>
+                <viewController id="vcE-Da-cCB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KLL-c4-kBh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peacock" translatesAutoresizingMaskIntoConstraints="NO" id="iBd-in-J11">
+                                <rect key="frame" x="36" y="36" width="342" height="429"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ry-8J-N4k">
+                                <rect key="frame" x="36" y="501" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="2GZ-wS-7N4"/>
+                                    <constraint firstAttribute="height" constant="40" id="hLN-JV-0fF"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="iiL-ne-PTK" kind="unwind" unwindAction="unwindToMain:" id="E0g-Fb-U7p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ry-8J-N4k" firstAttribute="top" secondItem="iBd-in-J11" secondAttribute="bottom" constant="36" id="28E-k8-pGz"/>
+                            <constraint firstItem="3ry-8J-N4k" firstAttribute="leading" secondItem="bJv-kE-fFa" secondAttribute="leading" constant="36" id="O4D-1L-sWt"/>
+                            <constraint firstItem="bJv-kE-fFa" firstAttribute="trailing" secondItem="iBd-in-J11" secondAttribute="trailing" constant="36" id="SEc-fh-j8O"/>
+                            <constraint firstItem="3ry-8J-N4k" firstAttribute="centerY" secondItem="KLL-c4-kBh" secondAttribute="centerY" constant="100" id="U8f-wi-Kfb"/>
+                            <constraint firstItem="iBd-in-J11" firstAttribute="leading" secondItem="bJv-kE-fFa" secondAttribute="leading" constant="36" id="nNs-4c-CUz"/>
+                            <constraint firstItem="iBd-in-J11" firstAttribute="top" secondItem="bJv-kE-fFa" secondAttribute="top" constant="36" id="pLi-nG-axv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJv-kE-fFa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0p-kZ-U2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iiL-ne-PTK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="495"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R5b-1C-Hpa">
+            <objects>
+                <viewController id="Ew3-Sj-ErG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ybr-vd-JhY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golden-eagle" translatesAutoresizingMaskIntoConstraints="NO" id="nSR-Ig-cW0">
+                                <rect key="frame" x="36" y="36" width="342" height="429"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-4H-c0Q">
+                                <rect key="frame" x="258" y="501" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dkb-Gt-kZf"/>
+                                    <constraint firstAttribute="width" constant="120" id="cu0-7H-4e5"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="HDx-ca-Tby" kind="unwind" unwindAction="unwindToMain:" id="rgG-Pt-Ktb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="p19-4H-c0Q" firstAttribute="centerY" secondItem="Ybr-vd-JhY" secondAttribute="centerY" constant="100" id="Aar-wS-jCV"/>
+                            <constraint firstItem="nSR-Ig-cW0" firstAttribute="leading" secondItem="cAn-gK-D4p" secondAttribute="leading" constant="36" id="BVf-zI-Fzf"/>
+                            <constraint firstItem="p19-4H-c0Q" firstAttribute="top" secondItem="nSR-Ig-cW0" secondAttribute="bottom" constant="36" id="FcJ-wF-Mlz"/>
+                            <constraint firstItem="nSR-Ig-cW0" firstAttribute="top" secondItem="cAn-gK-D4p" secondAttribute="top" constant="36" id="WRa-8g-bAE"/>
+                            <constraint firstItem="cAn-gK-D4p" firstAttribute="trailing" secondItem="nSR-Ig-cW0" secondAttribute="trailing" constant="36" id="X8W-RT-kPB"/>
+                            <constraint firstItem="cAn-gK-D4p" firstAttribute="trailing" secondItem="p19-4H-c0Q" secondAttribute="trailing" constant="36" id="oAY-E6-XdM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cAn-gK-D4p"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfX-Lc-Wwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HDx-ca-Tby" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="golden-eagle" width="640" height="426.5"/>
+        <image name="peacock" width="640" height="425"/>
+    </resources>
+</document>

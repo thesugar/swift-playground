@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBT-kH-yc7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ねこ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatsTabApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="nIt-BI-hip">
+                                <rect key="frame" x="36" y="80" width="342" height="697"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nIt-BI-hip" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="0k9-Sk-oO4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nIt-BI-hip" secondAttribute="bottom" constant="36" id="hYy-rZ-ul6"/>
+                            <constraint firstItem="nIt-BI-hip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="hza-Tl-bjB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIt-BI-hip" secondAttribute="trailing" constant="36" id="m5d-4b-wlj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ねこ" image="suit.heart" catalog="system" id="MSc-XM-Ghl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--とら-->
+        <scene sceneID="jdH-D2-lVg">
+            <objects>
+                <viewController id="u0h-AS-GiY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Lk-g1-b7m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiger" translatesAutoresizingMaskIntoConstraints="NO" id="dKS-xJ-fDl">
+                                <rect key="frame" x="36" y="80" width="342" height="697"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gTw-wB-HXx" firstAttribute="trailing" secondItem="dKS-xJ-fDl" secondAttribute="trailing" constant="36" id="6mr-4u-kAU"/>
+                            <constraint firstItem="dKS-xJ-fDl" firstAttribute="leading" secondItem="gTw-wB-HXx" secondAttribute="leading" constant="36" id="JAN-V7-7lN"/>
+                            <constraint firstItem="gTw-wB-HXx" firstAttribute="bottom" secondItem="dKS-xJ-fDl" secondAttribute="bottom" constant="36" id="XWE-PU-m35"/>
+                            <constraint firstItem="dKS-xJ-fDl" firstAttribute="top" secondItem="gTw-wB-HXx" secondAttribute="top" constant="36" id="xbt-Ay-7dF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gTw-wB-HXx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="とら" image="suit.spade" catalog="system" id="vY5-U9-WJb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWN-dN-sbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="802"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zd1-dl-Kht">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bBT-kH-yc7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xFh-CS-4ys">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eCS-JJ-L0Y"/>
+                        <segue destination="u0h-AS-GiY" kind="relationship" relationship="viewControllers" id="QqD-8Z-QGy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbT-ZZ-LUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="446"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="640" height="355.5"/>
+        <image name="suit.heart" catalog="system" width="64" height="54"/>
+        <image name="suit.spade" catalog="system" width="64" height="60"/>
+        <image name="tiger" width="640" height="476"/>
+    </resources>
+</document>

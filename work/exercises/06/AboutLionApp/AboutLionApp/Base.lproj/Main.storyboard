@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutLionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-r3-vgx">
+                                <rect key="frame" x="147" y="428" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Etf-38-xao"/>
+                                    <constraint firstAttribute="height" constant="40" id="LgH-jD-KVi"/>
+                                </constraints>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1I-WA-8iQ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cBA-Ls-CMY">
+                                <rect key="frame" x="87" y="361" width="240" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="APE-gZ-nbE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="写真を見る"/>
+                                    <segment title="説明を読む"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Wn-r3-vgx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QZ4-EH-qI8"/>
+                            <constraint firstItem="cBA-Ls-CMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SR5-1V-qmq"/>
+                            <constraint firstItem="1Wn-r3-vgx" firstAttribute="top" secondItem="cBA-Ls-CMY" secondAttribute="bottom" constant="36" id="Z4G-2G-7OU"/>
+                            <constraint firstItem="1Wn-r3-vgx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bN0-7R-klb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segment" destination="cBA-Ls-CMY" id="rlg-U8-Vun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M8q-Ev-uUN">
+            <objects>
+                <viewController id="Gyk-7P-rVf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSE-PA-plt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lion" translatesAutoresizingMaskIntoConstraints="NO" id="ZiE-VY-L6h">
+                                <rect key="frame" x="36" y="80" width="342" height="670"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-3v-x4B">
+                                <rect key="frame" x="258" y="786" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="J4G-8J-t2U"/>
+                                    <constraint firstAttribute="height" constant="40" id="PFV-92-h5D"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L7Z-ea-mgK" firstAttribute="bottom" secondItem="tOh-3v-x4B" secondAttribute="bottom" constant="36" id="4c5-g8-tbe"/>
+                            <constraint firstItem="tOh-3v-x4B" firstAttribute="top" secondItem="ZiE-VY-L6h" secondAttribute="bottom" constant="36" id="Gu3-UR-j7F"/>
+                            <constraint firstItem="L7Z-ea-mgK" firstAttribute="trailing" secondItem="ZiE-VY-L6h" secondAttribute="trailing" constant="36" id="WX6-ol-wyO"/>
+                            <constraint firstItem="ZiE-VY-L6h" firstAttribute="top" secondItem="L7Z-ea-mgK" secondAttribute="top" constant="36" id="cPq-Vl-YV9"/>
+                            <constraint firstItem="ZiE-VY-L6h" firstAttribute="leading" secondItem="L7Z-ea-mgK" secondAttribute="leading" constant="36" id="lfk-Y3-I3Q"/>
+                            <constraint firstItem="L7Z-ea-mgK" firstAttribute="trailing" secondItem="tOh-3v-x4B" secondAttribute="trailing" constant="36" id="q5x-Q5-aj0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L7Z-ea-mgK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSw-jw-KMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VUs-fH-pLT">
+            <objects>
+                <viewController id="s99-g6-vF9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ziG-MJ-yj9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ライオンは「百獣の王」と呼ばれており、昔から権力の象徴とされてきました。macOS（当時はOS X）のバージョンネームにも使われたことがあります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAh-7p-Kek">
+                                <rect key="frame" x="36" y="407.5" width="342" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbd-0L-1oi">
+                                <rect key="frame" x="147" y="525" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ExE-fG-Zky"/>
+                                    <constraint firstAttribute="height" constant="40" id="bPb-kb-Jwq"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fbd-0L-1oi" firstAttribute="top" secondItem="TAh-7p-Kek" secondAttribute="bottom" constant="36" id="3Z8-6K-IFS"/>
+                            <constraint firstItem="TAh-7p-Kek" firstAttribute="centerY" secondItem="ziG-MJ-yj9" secondAttribute="centerY" id="E0K-hv-UeR"/>
+                            <constraint firstItem="TAh-7p-Kek" firstAttribute="leading" secondItem="w3d-Vy-c3q" secondAttribute="leading" constant="36" id="K3W-5P-zyw"/>
+                            <constraint firstItem="Fbd-0L-1oi" firstAttribute="centerX" secondItem="ziG-MJ-yj9" secondAttribute="centerX" id="UzP-tf-0UN"/>
+                            <constraint firstItem="w3d-Vy-c3q" firstAttribute="trailing" secondItem="TAh-7p-Kek" secondAttribute="trailing" constant="36" id="tpk-po-72j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w3d-Vy-c3q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7p-Un-O6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="683.70535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lion" width="640" height="480"/>
+    </resources>
+</document>

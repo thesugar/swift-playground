@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FavoriteWallPaperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird00" translatesAutoresizingMaskIntoConstraints="NO" id="EgF-jz-wHR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="714"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pNM-kp-kAZ">
+                                <rect key="frame" x="87" y="794" width="240" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="80u-rO-CPT"/>
+                                    <constraint firstAttribute="width" constant="240" id="d4U-Ro-zWa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="A"/>
+                                    <segment title="B"/>
+                                    <segment title="C"/>
+                                    <segment title="D"/>
+                                    <segment title="E"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bYg-xq-yJ7"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pNM-kp-kAZ" secondAttribute="bottom" constant="36" id="2PG-n9-ixD"/>
+                            <constraint firstItem="EgF-jz-wHR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5FB-of-T2x"/>
+                            <constraint firstItem="pNM-kp-kAZ" firstAttribute="top" secondItem="EgF-jz-wHR" secondAttribute="bottom" constant="36" id="PfW-Pt-IYC"/>
+                            <constraint firstItem="pNM-kp-kAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YNk-Uz-beY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EgF-jz-wHR" secondAttribute="trailing" id="xds-mr-EBW"/>
+                            <constraint firstItem="EgF-jz-wHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yIZ-yJ-cQ6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="EgF-jz-wHR" id="AmP-dw-TcD"/>
+                        <outlet property="segment" destination="pNM-kp-kAZ" id="RN7-Ts-kCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bird00" width="640" height="425.5"/>
+    </resources>
+</document>

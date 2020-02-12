@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SliderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaves" translatesAutoresizingMaskIntoConstraints="NO" id="jhn-Lg-Q9U">
+                                <rect key="frame" x="36" y="80" width="342" height="417"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-L6-4fY">
+                                <rect key="frame" x="34" y="533" width="346" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xAs-3D-FFJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="avh-os-Sfh"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画像の中心座標" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqE-iX-Yuh">
+                                <rect key="frame" x="36" y="599" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jhn-Lg-Q9U" secondAttribute="trailing" constant="36" id="22t-bj-xBI"/>
+                            <constraint firstItem="uF9-L6-4fY" firstAttribute="top" secondItem="jhn-Lg-Q9U" secondAttribute="bottom" constant="36" id="2Ky-NE-KUf"/>
+                            <constraint firstItem="uF9-L6-4fY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="ByD-hB-9X7"/>
+                            <constraint firstItem="XqE-iX-Yuh" firstAttribute="top" secondItem="uF9-L6-4fY" secondAttribute="bottom" constant="36" id="NKB-OF-G6P"/>
+                            <constraint firstItem="jhn-Lg-Q9U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="UR8-fv-9Zw"/>
+                            <constraint firstItem="XqE-iX-Yuh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="XoZ-Il-0k6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XqE-iX-Yuh" secondAttribute="trailing" constant="36" id="a82-w1-UEz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uF9-L6-4fY" secondAttribute="trailing" constant="36" id="drv-ko-445"/>
+                            <constraint firstItem="uF9-L6-4fY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="lge-LD-hw5"/>
+                            <constraint firstItem="jhn-Lg-Q9U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="mgy-PC-gAt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="jhn-Lg-Q9U" id="b6f-QH-uVr"/>
+                        <outlet property="label" destination="XqE-iX-Yuh" id="JJq-xR-7he"/>
+                        <outlet property="slider" destination="uF9-L6-4fY" id="ARz-VR-rKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="leaves" width="640" height="426.5"/>
+    </resources>
+</document>

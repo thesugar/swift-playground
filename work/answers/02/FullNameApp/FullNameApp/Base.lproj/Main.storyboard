@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FullNameApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="氏名を表示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikm-0A-nBN">
+                                <rect key="frame" x="36" y="316" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-eu-DOX">
+                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vnd-EJ-DXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptf-xz-Nw5">
+                                <rect key="frame" x="147" y="501" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9md-rK-dGa"/>
+                                    <constraint firstAttribute="height" constant="40" id="YpA-SW-tRn"/>
+                                </constraints>
+                                <state key="normal" title="表示"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qx3-89-2Si"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLb-5F-OOh">
+                                <rect key="frame" x="107" y="373" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hbK-YG-HEA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cLb-5F-OOh" firstAttribute="top" secondItem="Ikm-0A-nBN" secondAttribute="bottom" constant="36" id="76t-eA-xfQ"/>
+                            <constraint firstItem="Ikm-0A-nBN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="7ZT-Kp-UvV"/>
+                            <constraint firstItem="Ptf-xz-Nw5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IkK-iV-WiZ"/>
+                            <constraint firstItem="cLb-5F-OOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SnK-EY-Zst"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ikm-0A-nBN" secondAttribute="trailing" constant="36" id="c0P-61-947"/>
+                            <constraint firstItem="Ptf-xz-Nw5" firstAttribute="top" secondItem="bQM-eu-DOX" secondAttribute="bottom" constant="36" id="d1u-1h-we2"/>
+                            <constraint firstItem="bQM-eu-DOX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iZp-pq-XEd"/>
+                            <constraint firstItem="bQM-eu-DOX" firstAttribute="top" secondItem="cLb-5F-OOh" secondAttribute="bottom" constant="24" id="sSr-YJ-alc"/>
+                            <constraint firstItem="bQM-eu-DOX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wZL-6i-sSV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="bQM-eu-DOX" id="uVc-az-ZGb"/>
+                        <outlet property="label" destination="Ikm-0A-nBN" id="O1T-Vu-N9g"/>
+                        <outlet property="lastNameTextField" destination="cLb-5F-OOh" id="4bk-qz-7AU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+    </scenes>
+</document>

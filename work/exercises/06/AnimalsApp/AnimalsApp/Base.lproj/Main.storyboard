@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vt-mh-yaC">
+                                <rect key="frame" x="189" y="430" width="36" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="4Wn-tf-KSU"/>
+                                    <constraint firstAttribute="width" constant="36" id="RTT-cV-Ebn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvM-uj-Lig">
+                                <rect key="frame" x="147" y="378" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ivT-aY-1X7"/>
+                                    <constraint firstAttribute="height" constant="40" id="ndV-M9-aNp"/>
+                                </constraints>
+                                <state key="normal" title="ひつじ"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJg-w7-r3b">
+                                <rect key="frame" x="147" y="478" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6TS-nI-utP"/>
+                                    <constraint firstAttribute="height" constant="40" id="AZW-YW-Kta"/>
+                                </constraints>
+                                <state key="normal" title="やぎ"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hvM-uj-Lig" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EB0-Ix-tbF"/>
+                            <constraint firstItem="5Vt-mh-yaC" firstAttribute="top" secondItem="hvM-uj-Lig" secondAttribute="bottom" constant="12" id="LyJ-64-TQe"/>
+                            <constraint firstItem="dJg-w7-r3b" firstAttribute="top" secondItem="5Vt-mh-yaC" secondAttribute="bottom" constant="12" id="ZnD-Pg-4DE"/>
+                            <constraint firstItem="5Vt-mh-yaC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zvg-Uo-pTF"/>
+                            <constraint firstItem="5Vt-mh-yaC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iQ5-V8-zcF"/>
+                            <constraint firstItem="dJg-w7-r3b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCQ-SJ-jP6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sJa-uk-56J">
+            <objects>
+                <viewController id="pHb-DY-QwC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEU-8y-mjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-2y-soW">
+                                <rect key="frame" x="258" y="786" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="RxJ-aK-rWT"/>
+                                    <constraint firstAttribute="height" constant="40" id="gZ7-Cd-kpF"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sheep" translatesAutoresizingMaskIntoConstraints="NO" id="Gc3-bj-cuF">
+                                <rect key="frame" x="36" y="80" width="342" height="670"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gc3-bj-cuF" firstAttribute="leading" secondItem="02P-IN-vSM" secondAttribute="leading" constant="36" id="BIq-R6-K7U"/>
+                            <constraint firstItem="02P-IN-vSM" firstAttribute="bottom" secondItem="c4G-2y-soW" secondAttribute="bottom" constant="36" id="Me5-MI-mdQ"/>
+                            <constraint firstItem="Gc3-bj-cuF" firstAttribute="top" secondItem="02P-IN-vSM" secondAttribute="top" constant="36" id="NAh-pQ-rru"/>
+                            <constraint firstItem="c4G-2y-soW" firstAttribute="top" secondItem="Gc3-bj-cuF" secondAttribute="bottom" constant="36" id="ika-Ua-ohi"/>
+                            <constraint firstItem="02P-IN-vSM" firstAttribute="trailing" secondItem="c4G-2y-soW" secondAttribute="trailing" constant="36" id="rE2-re-Bn3"/>
+                            <constraint firstItem="02P-IN-vSM" firstAttribute="trailing" secondItem="Gc3-bj-cuF" secondAttribute="trailing" constant="36" id="vdT-SZ-CO2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="02P-IN-vSM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZc-Lb-Qz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="-171"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TPL-xK-2bq">
+            <objects>
+                <viewController id="K5i-fp-pzj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1w-er-397">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-Y1-bUp">
+                                <rect key="frame" x="36" y="786" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="XrJ-zm-IBJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="awE-rI-eLh"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goat" translatesAutoresizingMaskIntoConstraints="NO" id="Zk6-A5-9zQ">
+                                <rect key="frame" x="36" y="80" width="342" height="670"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zk6-A5-9zQ" firstAttribute="top" secondItem="mr6-7F-YhZ" secondAttribute="top" constant="36" id="0vK-WW-EPf"/>
+                            <constraint firstItem="mr6-7F-YhZ" firstAttribute="bottom" secondItem="YeH-Y1-bUp" secondAttribute="bottom" constant="36" id="AUZ-Ij-35M"/>
+                            <constraint firstItem="mr6-7F-YhZ" firstAttribute="trailing" secondItem="Zk6-A5-9zQ" secondAttribute="trailing" constant="36" id="Afo-83-Dop"/>
+                            <constraint firstItem="Zk6-A5-9zQ" firstAttribute="leading" secondItem="mr6-7F-YhZ" secondAttribute="leading" constant="36" id="Nvr-Ep-ERH"/>
+                            <constraint firstItem="YeH-Y1-bUp" firstAttribute="leading" secondItem="mr6-7F-YhZ" secondAttribute="leading" constant="36" id="Oz1-Tf-VrI"/>
+                            <constraint firstItem="YeH-Y1-bUp" firstAttribute="top" secondItem="Zk6-A5-9zQ" secondAttribute="bottom" constant="36" id="PaU-a6-Yts"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mr6-7F-YhZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S44-tx-oDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="538"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goat" width="640" height="426.5"/>
+        <image name="sheep" width="640" height="480"/>
+    </resources>
+</document>
