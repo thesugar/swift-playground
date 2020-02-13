@@ -21,7 +21,18 @@ class ViewController: UIViewController {
             resultMessage = "整数を入力してください。"
         }
 
-
+        // create alert dialog
+        let alert = UIAlertController(title: "計算結果", message: resultMessage, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.textField1.text = ""
+            self.textField2.text = ""
+            self.view.endEditing(true)
+        }
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
         
     }
 

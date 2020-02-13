@@ -25,7 +25,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clearButtonTapped(_ sender: UIButton) {
-
+        // create action sheet
+        let sheet = UIAlertController(title: "計算履歴削除確認", message: "本当に削除しますか？", preferredStyle: .actionSheet)
+        
+        // create delete button
+        let removeAction = UIAlertAction(title: "削除実行", style: .destructive) { (action) in
+            self.textView.text = ""
+        }
+        
+        // create cancel button (not displayerd in iPad)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        
+        // add buttons into action sheet
+        sheet.addAction(removeAction)
+        sheet.addAction(cancelAction)
+        
+        sheet.popoverPresentationController?.sourceView = view
+        sheet.popoverPresentationController?.sourceRect = sender.frame
+        
+        // display action sheet
+        present(sheet, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
