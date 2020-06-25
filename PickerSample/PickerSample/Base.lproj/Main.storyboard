@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_4394" translatesAutoresizingMaskIntoConstraints="NO" id="48N-qJ-u70">
+                                <rect key="frame" x="36" y="80" width="342" height="510"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6br-BT-AZy">
+                                <rect key="frame" x="36" y="626" width="342" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="J21-o6-VrF"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="48N-qJ-u70" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="2He-zA-ow8"/>
+                            <constraint firstItem="6br-BT-AZy" firstAttribute="top" secondItem="48N-qJ-u70" secondAttribute="bottom" constant="36" id="KXU-5y-TPR"/>
+                            <constraint firstItem="6br-BT-AZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="MgU-d8-wYF"/>
+                            <constraint firstItem="48N-qJ-u70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="PHO-2q-7kG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6br-BT-AZy" secondAttribute="bottom" constant="36" id="QnC-gh-vBS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="48N-qJ-u70" secondAttribute="trailing" constant="36" id="Z32-D3-QvM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6br-BT-AZy" secondAttribute="trailing" constant="36" id="svb-WD-J66"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="48N-qJ-u70" id="2X2-2A-0uN"/>
+                        <outlet property="pickerView" destination="6br-BT-AZy" id="3qo-3a-pli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_4394" width="2016" height="1512"/>
+    </resources>
+</document>
