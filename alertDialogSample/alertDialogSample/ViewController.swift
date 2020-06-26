@@ -12,32 +12,45 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        let resultMessage: String
         
+        // メソッドを抜ける際に、入力値をクリアして編集状態を終了する
+        // （`defer` は後処理を記述するための構文。`defer` ブロックの内容は、外側のブロックを抜ける直前に実行される）
+        defer {
+            textField1.text = ""
+            textField2.text = ""
+            view.endEditing(true)
+        }
+        // 正しく整数が入力された場合のみ、計算してテキストビューに結果を表示
         if let number1 = Int(textField1.text!), let number2 = Int(textField2.text!) {
             let result = number1 + number2
-            resultMessage = "\(number1) + \(number2) = \(result)"
-        } else {
-            resultMessage = "整数を入力してください。"
+            let expression: String = "\(number1) + \(number2) = \(result)\n"
+            
+            // テキストビューに、計算結果の文字列を追記
+            textView.text = textView.text + expression
+        }
+    }
+    
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        // アクションシートを作成
+        let sheet = UIAlertController(title: "計算履歴削除確認", message: "本当に削除しますか？", preferredStyle: .actionSheet)
+        
+        // 削除ボタンを作成
+        let removeAction = UIAlertAction(title: "削除実行", style: .destructive) { action in
+            self.textView.text = ""
         }
         
-        // アラートダイアログを作成
-        let alert = UIAlertController(title: "計算結果", message: resultMessage , preferredStyle: .alert)
+        // キャンセルボタンを作成（iPad では表示されない）
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         
-        // OK ボタンを作成、クリックされたら現在の入力値をクリアするように handler に指定
-        let okAction = UIAlertAction(title: "OK", style: .default) { action in
-            self.textField1.text = ""
-            self.textField2.text = ""
-            self.view.endEditing(true)
-        }
+        // 作成したボタンをアクションシートに追加
+        sheet.addAction(removeAction)
+        sheet.addAction(cancelAction)
         
-        // アラートダイアログに OK ボタンを追加
-        alert.addAction(okAction)
-        
-        // アラートダイアログを表示
-        present(alert, animated: true, completion: nil)
+        // アクションシートを表示
+        present(sheet, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

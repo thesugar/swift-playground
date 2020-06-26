@@ -31,29 +31,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I52-Em-fAP">
+                                <rect key="frame" x="121.5" y="458.5" width="31" height="30"/>
+                                <state key="normal" title="計算"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGb-Lr-luD"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-QC-qUc">
                                 <rect key="frame" x="201.5" y="387.5" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I52-Em-fAP">
-                                <rect key="frame" x="191.5" y="458.5" width="31" height="30"/>
-                                <state key="normal" title="計算"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-a8-ZMT">
+                                <rect key="frame" x="254" y="458.5" width="46" height="30"/>
+                                <state key="normal" title="クリア"/>
                                 <connections>
-                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGb-Lr-luD"/>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="III-i6-Nsc"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ojX-Rx-nNr">
+                                <rect key="frame" x="85" y="538.5" width="244" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yzr-4O-0aH"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gJ1-3c-3P1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="5N4-Ok-xWy"/>
                             <constraint firstItem="B66-OB-6Td" firstAttribute="leading" secondItem="Bne-QC-qUc" secondAttribute="trailing" constant="36" id="6jj-27-EVX"/>
-                            <constraint firstItem="I52-Em-fAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DFX-GW-8cQ"/>
+                            <constraint firstItem="I52-Em-fAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-70" id="DFX-GW-8cQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ojX-Rx-nNr" secondAttribute="trailing" constant="85" id="DHJ-1y-fXf"/>
                             <constraint firstItem="Bne-QC-qUc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FfQ-fF-FDw"/>
                             <constraint firstItem="Bne-QC-qUc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="HFZ-pP-acM"/>
                             <constraint firstItem="Bne-QC-qUc" firstAttribute="leading" secondItem="gJ1-3c-3P1" secondAttribute="trailing" constant="36" id="TCv-Ej-Oku"/>
+                            <constraint firstItem="ogv-a8-ZMT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="70" id="WdJ-Zg-8ce"/>
                             <constraint firstItem="B66-OB-6Td" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="X8t-gB-asX"/>
+                            <constraint firstItem="ogv-a8-ZMT" firstAttribute="top" secondItem="Bne-QC-qUc" secondAttribute="bottom" constant="50" id="ai5-cs-pHn"/>
+                            <constraint firstItem="ojX-Rx-nNr" firstAttribute="top" secondItem="I52-Em-fAP" secondAttribute="bottom" constant="50" id="gML-AW-AhK"/>
+                            <constraint firstItem="ojX-Rx-nNr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWB-RR-CKc"/>
+                            <constraint firstItem="ojX-Rx-nNr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="lEM-3X-cog"/>
                             <constraint firstItem="I52-Em-fAP" firstAttribute="top" secondItem="Bne-QC-qUc" secondAttribute="bottom" constant="50" id="m1W-36-qz7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,6 +84,7 @@
                     <connections>
                         <outlet property="textField1" destination="gJ1-3c-3P1" id="ICj-k3-ZkP"/>
                         <outlet property="textField2" destination="B66-OB-6Td" id="Xfy-Dt-M4T"/>
+                        <outlet property="textView" destination="ojX-Rx-nNr" id="IkL-ns-65A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
