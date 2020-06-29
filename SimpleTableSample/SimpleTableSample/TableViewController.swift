@@ -96,14 +96,20 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        // 次画面のビューコントローラと選択行の indexPath が取得できた場合のみ、後続の処理を行う
+        // as? はキャストだが、キャストに失敗したら nil を入れるという意味
+        guard let dest = segue.destination as? DetailViewController else { return }
+        // tableView プロパティは、UITableViewController（このクラスが継承している親クラス）が保持しているプロパティで、
+        // 自身が制御する UITableView を指すもの。
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        dest.imageName = items[indexPath.row].imegaName
     }
-    */
 
 }
