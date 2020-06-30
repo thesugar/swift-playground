@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GZi-bz-baf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="UserDefaultsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz8-1X-aIg">
+                                <rect key="frame" x="169.5" y="437.5" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zz8-1X-aIg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a2D-M3-Bfj"/>
+                            <constraint firstItem="zz8-1X-aIg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWY-RF-2GR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="person" catalog="system" id="zK5-og-QNz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="NAP-ta-laJ">
+            <objects>
+                <viewController id="qs6-0o-sQQ" customClass="SecondViewController" customModule="UserDefaultsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIl-rD-7WJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-dL-tn9">
+                                <rect key="frame" x="157.5" y="437.5" width="99.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ll4-ad-LbN">
+                                <rect key="frame" x="100" y="494.5" width="214" height="32"/>
+                                <segments>
+                                    <segment title="White"/>
+                                    <segment title="Gray"/>
+                                    <segment title="Brown"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="qs6-0o-sQQ" eventType="valueChanged" id="Rt8-1m-bcN"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ll4-ad-LbN" firstAttribute="leading" secondItem="dao-dh-r78" secondAttribute="leading" constant="100" id="IfO-IU-J3R"/>
+                            <constraint firstItem="wcL-dL-tn9" firstAttribute="centerX" secondItem="eIl-rD-7WJ" secondAttribute="centerX" id="P9d-nW-zQe"/>
+                            <constraint firstItem="Ll4-ad-LbN" firstAttribute="top" secondItem="wcL-dL-tn9" secondAttribute="bottom" constant="36" id="Z0D-lt-0o5"/>
+                            <constraint firstItem="dao-dh-r78" firstAttribute="trailing" secondItem="Ll4-ad-LbN" secondAttribute="trailing" constant="100" id="cff-rh-AIm"/>
+                            <constraint firstItem="wcL-dL-tn9" firstAttribute="centerY" secondItem="eIl-rD-7WJ" secondAttribute="centerY" id="l2A-qc-0TZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dao-dh-r78"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="pencil" catalog="system" id="9dB-4e-fBn"/>
+                    <connections>
+                        <outlet property="segment" destination="Ll4-ad-LbN" id="gfY-x9-ZvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFA-UX-3RQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="860"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7uY-lk-6hV">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GZi-bz-baf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dxv-hR-NE3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="y58-Sg-5lX"/>
+                        <segue destination="qs6-0o-sQQ" kind="relationship" relationship="viewControllers" id="U8V-it-iZN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WoL-AN-81s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>
